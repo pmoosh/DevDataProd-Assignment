@@ -26,8 +26,8 @@ shinyUI(fluidPage(
         value = FALSE),
       
       helpText("Note: We use the data from the mtcars dataset.",
-               "A User can choose sets limited to the number of cylinders.",
-               "Enter a value for the weight you want the mpg estimated for",
+               "A User can choose sets limited to the number of cylinders and",
+               "use the slider to adjust the weight you want the mpg estimated for",
                "Optionally a prediction interval can be displayed.")
       
     ),
@@ -40,9 +40,15 @@ shinyUI(fluidPage(
         br(),
         
         p("When gas prices are high, it is important to understand the impact weight has on a cars performance."),
-        p("In this discussion we particularily interested in estimating the MPG (miles per gallon) numbers based in the cars weight as a predictor"),
-        p("The measured data are taken from the mtcar dataset. Estimates are calcutated via linear regression (lm)."),
-        p("The existing data ranges from 1513 to 5424, therefore estimates are limited to range from 1000 to 6000 pounds")
+        p("In this discussion we are particularily interested in estimating the MPG (miles per gallon) numbers based in the cars weight as a predictor"),
+        p("The measured data are taken from the mtcar dataset. Estimates are calcutated via linear regression (in R implemented with the lm function)."),
+        p("The existing data ranges from 1513 to 5424, therefore estimates are limited to range from 1000 to 6000 pounds"),
+        br(),
+        br(),
+        h5("Additional Information:"),
+        br(),
+        a("Source Code can be found on GitHub", href="https://github.com/pmoosh/DevDataProd-Assignment")
+        
     )
   )
 ))
